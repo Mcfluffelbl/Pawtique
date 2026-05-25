@@ -2,6 +2,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 
 import HomePage from './pages/HomePage'
 import CatsPage from './pages/CatsPage'
+import ShopPage from './pages/ShopPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import CartPage from './pages/CartPage'
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/cats" element={<CatsPage />} />
+        <Route path="/shop" element={<ShopPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/cart" element={<CartPage />} />
