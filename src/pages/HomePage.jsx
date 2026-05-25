@@ -45,9 +45,11 @@ function HomePage() {
         <div className="section-header">
           <h2>🐾 Featured Cats</h2>
 
-          <h4>
-            View all cats <ArrowRight />
-          </h4>
+          <Link to="/cats">
+            <h4>
+              View all cats <ArrowRight />
+            </h4>
+          </Link>
         </div>
 
         <div className="card-grid">
