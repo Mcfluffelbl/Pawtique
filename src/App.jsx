@@ -1,29 +1,10 @@
 import { Routes, Route, Link } from 'react-router-dom'
 
-function Home() {
-  return <h1>Home Page</h1>
-}
-
-function Cats() {
-  return (
-    <div>
-      <h1>Cats Page</h1>
-      <h2>Here you can find all the cats we have for sale!</h2>
-    </div>
-  )
-}
-
-function AboutPage() {
-  return <h1>About Page</h1>
-}
-
-function ContactPage() {
-  return <h1>Contact Page</h1>
-}
-
-function Cart() {
-  return <h1>Cart Page</h1>
-}
+import HomePage from './pages/HomePage'
+import CatsPage from './pages/CatsPage'
+import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
+import CartPage from './pages/CartPage'
 
 function App() {
   return (
@@ -42,12 +23,13 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cats" element={<Cats />} />
-        <Route path="*" element={<h1>404 Not Found</h1>} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/cats" element={<CatsPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<CartPage />} />
+
+        <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
 
     </div>
