@@ -70,7 +70,6 @@ h1,
 h2 {
   font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
 }
 
 h1 {
@@ -108,4 +107,29 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 25px;
+  background-color: #f7f1e7;
+  color: rgb(20, 20, 20);
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+  color:rgba(0, 0, 0, 0.05);
+}
+
+.links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
 }
