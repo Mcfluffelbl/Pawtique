@@ -1,0 +1,174 @@
+.home-page {
+  padding: 30px 80px;
+  background: #fffafc;
+}
+
+/* HERO */
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff1f5;
+  border-radius: 30px;
+  padding: 50px;
+  margin-bottom: 50px;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 70px;
+  line-height: 1.1;
+  color: #111827;
+}
+
+.hero-text span {
+  color: #7c3aed;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  color: #555;
+  font-size: 20px;
+  max-width: 500px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 15px 28px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #7c3aed;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #6d28d9;
+}
+
+.secondary-btn {
+  background: white;
+  border: 2px solid #7c3aed;
+  color: #7c3aed;
+}
+
+.secondary-btn:hover {
+  background: #e7d9f0;
+  border: 2px solid #7c3aed;
+  color: #7c3aed;
+}
+
+.hero-image img {
+  width: 500px;
+  border-radius: 30px;
+}
+
+/* SECTION */
+
+.content-section {
+  margin-bottom: 60px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+}
+
+.section-header h4 {
+  color: #7c3aed;
+  cursor: pointer;
+}
+
+/* CARDS */
+
+.card-grid,
+.tips-grid {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card,
+.product-card {
+  width: 280px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding-bottom: 20px;
+}
+
+.card img,
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card h3,
+.product-card h3 {
+  margin: 15px;
+}
+
+.card p,
+.product-card p {
+  margin: 0 15px 15px;
+  color: #666;
+}
+
+.card button,
+.product-card button {
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #7c3aed;
+  color: white;
+  cursor: pointer;
+}
+
+.card button:hover,
+.product-card button:hover {
+  background: #6d28d9;
+}
+
+/* TIPS */
+
+.tip-card {
+  display: flex;
+  width: 450px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.tip-card img {
+  width: 180px;
+  object-fit: cover;
+}
+
+.tip-card div {
+  padding: 20px;
+}

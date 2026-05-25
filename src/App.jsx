@@ -7,6 +7,7 @@ import ContactPage from './pages/ContactPage'
 import CartPage from './pages/CartPage'
 
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
 
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
+
+      <Footer />
 
     </div>
   )
