@@ -24,10 +24,11 @@ function HomePage() {
                 🐾 Adopt a Cat
               </button>
             </Link>
-
-            <button className="secondary-btn">
+            <Link to="/shop">
+              <button className="secondary-btn">
               Browse Shop
-            </button>
+              </button>
+            </Link>
           </div>
         </div>
 
