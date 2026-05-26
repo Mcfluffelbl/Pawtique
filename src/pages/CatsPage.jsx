@@ -43,7 +43,7 @@ function CatsPage() {
           <div className="cat-info">
             <h3>Whiskers</h3>
 
-            <p>Male • Domestic Shorthair • 2 years</p>
+            <p>Male • Domestic Shorthair • Greece</p>
 
             <button>Meet Me</button>
           </div>
@@ -58,7 +58,7 @@ function CatsPage() {
           <div className="cat-info">
             <h3>Milo</h3>
 
-            <p>Male • Tabby • 1 year</p>
+            <p>Male • Tabby • Bulgerian</p>
 
             <button>Meet Me</button>
           </div>
@@ -73,7 +73,7 @@ function CatsPage() {
           <div className="cat-info">
             <h3>Daisy</h3>
 
-            <p>Female • Calico • 1.5 years</p>
+            <p>Female • Calico • Sweden</p>
 
             <button>Meet Me</button>
           </div>
@@ -88,7 +88,7 @@ function CatsPage() {
           <div className="cat-info">
             <h3>Luna</h3>
 
-            <p>Female • Persian • 2 years</p>
+            <p>Female • Persian • USA</p>
 
             <button>Meet Me</button>
           </div>
@@ -96,15 +96,17 @@ function CatsPage() {
 
       </section>
 
+       <div classname="page">
+          <button>last page</button>
+          <h5>Page 1 of 10</h5>
+          <button>next page</button>
+        </div>
+
       <section className="adoption-commercial-section">
 
         <h2>
           Give a cat a home, and they’ll give you love forever.
         </h2>
-
-        <p>
-          Fill out our adoption form and we’ll get back to you soon!
-        </p>
 
         <button>Start Adopting Now</button>
 
