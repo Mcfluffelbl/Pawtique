@@ -1,0 +1,161 @@
+.cats-page {
+  padding: 40px 80px;
+  background: #fffafc;
+  min-height: 100vh;
+}
+
+/* HERO */
+
+.hero-cats-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #fff1f5, #f3e8ff);
+  border-radius: 35px;
+  padding: 50px;
+  margin-bottom: 40px;
+  gap: 40px;
+}
+
+.hero-text h1 {
+  font-size: 65px;
+  color: #111827;
+  line-height: 1.1;
+}
+
+.hero-text span {
+  color: #7c3aed;
+}
+
+.hero-text p {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #555;
+}
+
+.hero-cats-section img {
+  width: 450px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+/* TOP CONTROLS */
+
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+/* SEARCH */
+
+.search-bar {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input {
+  padding: 14px;
+  border-radius: 14px;
+  border: 2px solid #e9d5ff;
+  width: 260px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 14px;
+  background: #7c3aed;
+  color: white;
+  cursor: pointer;
+}
+
+/* CAT GRID */
+
+.cats-list-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* CARD */
+
+.cat-card {
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.cat-card:hover {
+  transform: translateY(-5px);
+}
+
+.cat-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.cat-info {
+  padding: 20px;
+}
+
+.cat-info h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.cat-info p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.cat-info button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #7c3aed;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ADOPTION SECTION */
+
+.adoption-commercial-section {
+  background: linear-gradient(to right, #f3e8ff, #fdf2f8);
+  padding: 50px;
+  border-radius: 35px;
+  text-align: center;
+}
+
+.adoption-commercial-section h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.adoption-commercial-section p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.adoption-commercial-section button {
+  padding: 16px 30px;
+  border: none;
+  border-radius: 14px;
+  background: #7c3aed;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
