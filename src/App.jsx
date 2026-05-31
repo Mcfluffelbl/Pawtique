@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import CatsPage from './pages/CatsPage'
 import ShopPage from './pages/ShopPage'
+import ArticlePage from './pages/ArticlePage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import CartPage from './pages/CartPage'
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/cats" element={<CatsPage />} />
         <Route path="/shop" element={<ShopPage />} />
+        <Route path="/article" element={<ArticlePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/cart" element={<CartPage />} />

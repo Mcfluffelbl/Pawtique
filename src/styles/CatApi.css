@@ -1,0 +1,74 @@
+.catcard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.catcard {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.2s;
+}
+
+.catcard:hover {
+  transform: translateY(-5px);
+}
+
+.catcard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.catcard-content {
+  padding: 15px;
+}
+
+.catcard-content h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.catcard-content p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.catcard-content .breed {
+  font-weight: bold;
+  color: #333;
+}
+
+.catcard-content .origin {
+  font-style: italic;
+  color: #777;
+}
+
+.catcard-content .temperament {
+  margin-top: 10px;
+  color: #555;
+}
+
+.catcard-content .description {
+  margin-top: 10px;
+  color: #555;
+}
+
+.catcard-content .link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.catcard-content .link:hover {
+  background-color: #0056b3;
+}

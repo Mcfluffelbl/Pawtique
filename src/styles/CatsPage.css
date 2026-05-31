@@ -121,12 +121,18 @@
 .cat-info button {
   width: 100%;
   padding: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: none;
   border-radius: 12px;
   background: #7c3aed;
   color: white;
   font-size: 16px;
   cursor: pointer;
+}
+
+.cat-info button:hover {
+  background: #6d2ba3;
 }
 
 /* ADOPTION SECTION */
