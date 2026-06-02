@@ -8,6 +8,7 @@ import OwnersPage from './pages/OwnersPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import CartPage from './pages/CartPage'
+import CatDetailsPage from "./pages/CatDetailsPage";
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -27,7 +28,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/cart" element={<CartPage />} />
-
+        <Route path="/catDetailPage/:id" element={<CatDetailsPage />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
 

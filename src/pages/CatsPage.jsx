@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react"
 import Pagination from "../components/Pagination";
 import { usePagination } from "../hooks/usePagination";
+import { useNavigate } from "react-router-dom";
 
 import "../styles/CatsPage.css"
 
 function CatsPage() {
   const [cats, setCats] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchCats() {
@@ -76,8 +78,8 @@ function CatsPage() {
               <br />
               Temperament: {cat.temperament}
             </p>
-            <button>Meet Me</button>
-            <button>Adopt Me</button>
+            <button onClick={() => navigate(`/catDetailPage/${cat.id}`)}>Meet Me</button>
+            <button onClick={() => {}}>Adopt Me</button>
           </div>
         </div>
       ))}

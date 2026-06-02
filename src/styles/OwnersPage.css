@@ -1,0 +1,99 @@
+.owners-page {
+    padding: 40px 80px;
+    background: #fffafc;
+    min-height: 100vh;
+}
+
+/* HERO */
+
+.owners-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #fdf2f8, #f3e8ff);
+  border-radius: 35px;
+  padding: 50px;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.owners-text {
+  flex: 1;
+}
+
+.owners-text h2 {
+  color: #7c3aed;
+  margin-bottom: 15px;
+}
+
+.owners-text h1 {
+  font-size: 65px;
+  line-height: 1.1;
+  color: #111827;
+  margin-bottom: 25px;
+}
+
+.owners-text span {
+  color: #7c3aed;
+}
+
+.owners-text p {
+  color: #555;
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.owners-hero img {
+  width: 500px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+/* OWNERS */
+
+.owners-section {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.owners-section img {
+  width: 400px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.owners-section h2 {
+  font-size: 28px;
+  color: #111827;
+  line-height: 1.4;
+}
+
+.owners-section h4 {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #555;
+}
+
+.owners-section span {
+  color: #7c3aed;
+}
+
+.owners-section p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.owners-section button {
+  margin-top: 20px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 14px;
+  background: #7c3aed;
+  color: #fff;
+  cursor: pointer;
+}
