@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import { usePagination } from "../hooks/UsePagination";
+import Pagination from "../components/Pagination";
+
 import "../styles/CatApi.css";
 
 function CatApi() {
@@ -25,6 +28,14 @@ function CatApi() {
     fetchCats();
   }, []);
 
+  const {
+    currentItems,
+    currentPage,
+    totalPages,
+    nextPage,
+    previousPage,
+  } = usePagination(cats, 6);
+
   return (
     <div className="catcard-container">
       <h1>Cat Breeds</h1>
@@ -37,6 +48,14 @@ function CatApi() {
           <p>{cat.temperament}</p>
         </div>
       ))}
+      
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onNext={nextPage}
+        onPrevious={previousPage}
+      />
+
     </div>
   )
 }

@@ -1,0 +1,25 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.page button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #7c3aed;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.page button:hover:not(:disabled) {
+  background-color: #6b21a8;
+}
+
+.page button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
