@@ -101,9 +101,11 @@ function HomePage() {
             <Handbag /> Shop Popular Picks
           </h2>
 
-          <h4>
-            View all products <ArrowRight />
-          </h4>
+          <Link to="/shop">
+            <h4>
+              View all products <ArrowRight />
+            </h4>
+          </Link>
         </div>
 
         <div className="card-grid">
@@ -144,9 +146,11 @@ function HomePage() {
             <Newspaper /> Cat Care Tips
           </h2>
 
-          <h4>
-            Read all articles <ArrowRight />
-          </h4>
+          <Link to="/article">
+            <h4>
+              Read all articles <ArrowRight />
+            </h4>
+          </Link>
         </div>
 
         <div className="tips-grid">

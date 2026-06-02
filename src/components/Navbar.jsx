@@ -17,6 +17,7 @@ function Navbar() {
         <Link to="/cats">Cats</Link>
         <Link to="/shop">Shop</Link>
         <Link to="/article">Article</Link>
+        <Link to="/owners">Owners</Link>
         <Link to="/about">About Us</Link>
         <Link to="/contact">Contact</Link>
       </div>
