@@ -16,8 +16,10 @@ import { Link } from "react-router-dom";
 
 function CartPage() {
   const { cart, removeFromCart } = useCart();
-  const subtotal = cart.length;
-  const shipping = cart.length > 0 ? 1 : 0;
+  const isEmpty = cart.length === 0;
+  const catCount = cart.length;
+  const subtotal = cart.length * 10;
+  const shipping = cart.length > 0 ? 4.99 : 0;
   const total = subtotal + shipping;
 
   return (
@@ -52,7 +54,7 @@ function CartPage() {
           </div>
 ))}
 
-          <Link to="/shop">
+          <Link to="/cats">
             <button className="continue-btn">
               <ArrowLeft />
               Continue Shopping
@@ -66,7 +68,7 @@ function CartPage() {
           <h2>Order Summary</h2>
 
           <div className="summary-line">
-            <p>Subtotal</p>
+            <p>Items ({catCount})</p>
             <p>{subtotal.toFixed(2)}</p>
           </div>
 
@@ -79,7 +81,7 @@ function CartPage() {
 
           <div className="summary-total">
             <h3>Total</h3>
-            <h3>{total}</h3>
+            <h3>{total.toFixed(2)}</h3>
           </div>
 
           <Link to="/checkout">

@@ -57,7 +57,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2024 Pawtique. All rights reserved.</p>
+        <p>© 2026 Pawtique. All rights reserved.</p>
       </div>
     </footer>
   )
