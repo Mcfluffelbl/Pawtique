@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import Pagination from "../components/Pagination";
-import { usePagination } from "../hooks/usePagination";
+import { usePagination } from "../hooks/UsePagination";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 

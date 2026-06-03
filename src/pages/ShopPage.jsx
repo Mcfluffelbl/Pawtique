@@ -77,13 +77,13 @@ function ShopPage() {
           </div>
 
           <img
-            src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?q=80&w=600&auto=format&fit=crop"
+            src="https://media.zooplus.com/bilder/7/400/71629_pla_whiskas_1_huhn_7kg_1000x1000_hs_01_7.jpg?width=400&format=webp"
             alt="Cat food"
           />
 
           <div className="product-info">
 
-            <h3>Whisker Crunch Food</h3>
+            <h3>Whiskas Crunch Food</h3>
 
             <p>Premium chicken recipe for cats.</p>
 
@@ -105,7 +105,7 @@ function ShopPage() {
           </div>
 
           <img
-            src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?q=80&w=600&auto=format&fit=crop"
+            src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQuu-jEqDTa4LLSC2Q9XOyzOxDrK7GOaAgQPlwwpEBmQEaYYoRgEU77IDpQ_DTVuVE6Iwwa-lRKh9hL_zyis_I0Km4fGggpnF61VEf-KFd14uyG4vhSzHsAGdM03fOrsL5s6lbfDGpFmTc&usqp=CAc"
             alt="Toy"
           />
 
@@ -133,7 +133,7 @@ function ShopPage() {
           </div>
 
           <img
-            src="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=600&auto=format&fit=crop"
+            src="https://media.zooplus.com/bilder/1/400/481718_pla_tiaki_cat_cave_harry_fg_4328_1.jpg?width=400&format=webp"
             alt="Bed"
           />
 
@@ -161,7 +161,7 @@ function ShopPage() {
           </div>
 
           <img
-            src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=600&auto=format&fit=crop"
+            src="https://i.etsystatic.com/10293093/r/il/b65a37/3417096872/il_570xN.3417096872_awcp.jpg"
             alt="Collar"
           />
 
