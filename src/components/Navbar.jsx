@@ -1,3 +1,5 @@
+import { useCart } from '../context/CartContext';
+
 import "../styles/NavBar.css";
 
 import { Link } from 'react-router-dom'
@@ -5,6 +7,9 @@ import { Link } from 'react-router-dom'
 import { Cart } from 'react-bootstrap-icons'
 
 function Navbar() {
+  const { cart } = useCart();
+  const catCount = cart.length;
+
   return (
     <nav className="navbar">
 
@@ -23,7 +28,14 @@ function Navbar() {
       </div>
 
       <div className="linkleft">
-        <Link to="/cart"><Cart /></Link>
+        <Link to="/cart" className="cart-link">
+          <Cart className="cart-icon" />
+          {catCount > 0 && (
+            <span className="cart-count">
+              {catCount}
+            </span>
+          )}
+        </Link>
       </div>
 
     </nav>
