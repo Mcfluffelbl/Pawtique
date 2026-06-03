@@ -89,3 +89,36 @@
   border: 2px solid white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+  .logo a {
+    font-size: 28px;
+  }
+  .cart-icon {
+    font-size: 24px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .logo a {
+    font-size: 26px;
+  }
+  .cart-icon {
+    font-size: 22px;
+  }
+}

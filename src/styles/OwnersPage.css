@@ -45,7 +45,9 @@
 }
 
 .owners-hero img {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   border-radius: 30px;
   object-fit: cover;
 }
@@ -54,7 +56,7 @@
 
 .owners-section {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   align-items: center;
   margin-bottom: 60px;
 }
@@ -96,4 +98,91 @@
   background: #7c3aed;
   color: #fff;
   cursor: pointer;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+
+  .owners-page {
+    padding: 30px 40px;
+  }
+
+  .owners-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .owners-text h1 {
+    font-size: 48px;
+  }
+
+  .owners-text p {
+    font-size: 18px;
+    margin: 0 auto;
+  }
+
+  .owners-hero img {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .owners-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .owners-section img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .owners-page {
+    padding: 20px;
+  }
+
+  .owners-hero {
+    padding: 25px;
+    border-radius: 25px;
+  }
+
+  .owners-text h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .owners-text h2 {
+    font-size: 16px;
+  }
+
+  .owners-text p {
+    font-size: 16px;
+  }
+
+  .owners-hero img {
+    width: 100%;
+  }
+
+  .owners-section h2 {
+    font-size: 22px;
+  }
+
+  .owners-section h4 {
+    font-size: 16px;
+  }
+
+  .owners-section p {
+    font-size: 15px;
+  }
+
+  .owners-section button {
+    width: 100%;
+    padding: 12px;
+  }
 }

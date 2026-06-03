@@ -41,7 +41,9 @@
 }
 
 .contact-hero img {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   border-radius: 30px;
 }
 
@@ -182,4 +184,122 @@
 .contact-bottom p {
   color: #666;
   font-size: 18px;
+}
+
+/* TABLETS */
+
+@media (max-width: 1024px) {
+
+  .contact-page {
+    padding: 30px 40px;
+  }
+
+  .contact-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .contact-hero-text h1 {
+    font-size: 48px;
+  }
+
+  .contact-hero-text p {
+    font-size: 18px;
+    margin: 0 auto;
+  }
+
+  .contact-hero img {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-form h2,
+  .contact-info h2 {
+    font-size: 32px;
+  }
+
+  .contact-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .contact-page {
+    padding: 20px;
+  }
+
+  .contact-hero {
+    padding: 25px;
+    border-radius: 25px;
+  }
+
+  .contact-hero-text h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .contact-hero-text h3 {
+    font-size: 16px;
+  }
+
+  .contact-hero-text p {
+    font-size: 16px;
+  }
+
+  .contact-hero img {
+    width: 100%;
+  }
+
+  .contact-container {
+    padding: 25px;
+    border-radius: 25px;
+  }
+
+  .input-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-form h2,
+  .contact-info h2 {
+    font-size: 24px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .info-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-bottom {
+    padding: 25px;
+    border-radius: 25px;
+  }
+
+  .contact-bottom img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contact-bottom h2 {
+    font-size: 28px;
+  }
+
+  .contact-bottom p {
+    font-size: 16px;
+  }
 }
