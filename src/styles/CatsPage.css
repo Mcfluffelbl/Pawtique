@@ -34,7 +34,9 @@
 }
 
 .hero-cats-section img {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
   border-radius: 30px;
   object-fit: cover;
 }
@@ -84,20 +86,6 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 30px;
   margin-bottom: 60px;
-}
-
-/* tablet */
-@media (max-width: 1000px) {
-  .cats-list-section {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* mobile */
-@media (max-width: 650px) {
-  .cats-list-section {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* CARD */
@@ -189,4 +177,119 @@
   color: white;
   font-size: 16px;
   cursor: pointer;
+}
+
+/* TABLETS (≤ 1024px) */
+
+@media (max-width: 1024px) {
+
+  .cats-page {
+    padding: 30px 40px;
+  }
+
+  .hero-cats-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  .hero-cats-section img {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .search-Cat-bar {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .cats-list-section {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* MOBILE (≤ 768px) */
+
+@media (max-width: 768px) {
+
+  .cats-page {
+    padding: 20px;
+  }
+
+  .hero-cats-section {
+    padding: 25px;
+    border-radius: 25px;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .hero-cats-section img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .top-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-Cat-bar {
+    width: 100%;
+  }
+
+  .search-Cat-bar input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .search-Cat-bar button {
+    width: 100%;
+  }
+
+  .cats-list-section {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .cat-info h3 {
+    font-size: 22px;
+  }
+
+  .cat-info p {
+    font-size: 14px;
+  }
+
+  .cat-info button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .adoption-commercial-section {
+    padding: 25px;
+    border-radius: 25px;
+  }
+
+  .adoption-commercial-section h2 {
+    font-size: 28px;
+  }
+
+  .adoption-commercial-section p {
+    font-size: 16px;
+  }
 }

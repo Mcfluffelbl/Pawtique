@@ -54,7 +54,9 @@
 }
 
 .cat-hero img {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   border-radius: 30px;
   object-fit: cover;
 }
@@ -130,4 +132,107 @@
 
 .cat-details-info .adopt-btn:hover {
   background: #6d28d9;
+}
+
+/* TABLET (≤ 1024px) */
+
+@media (max-width: 1024px) {
+
+  .cat-details-page {
+    padding: 30px 40px;
+  }
+
+  .cat-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .cat-hero-text h1 {
+    font-size: 42px;
+  }
+
+  .cat-hero-text p {
+    font-size: 18px;
+    margin: 0 auto;
+  }
+
+  .cat-hero img {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .cat-details-ratings {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cat-details-info .adopt-btn {
+    width: 80%;
+  }
+}
+
+/* MOBILE (≤ 768px) */
+
+@media (max-width: 768px) {
+
+  .cat-details-page {
+    padding: 20px;
+  }
+
+  .cat-details-back-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cat-hero {
+    padding: 25px;
+    border-radius: 25px;
+  }
+
+  .cat-hero-text h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .cat-hero-text p {
+    font-size: 16px;
+  }
+
+  .cat-hero img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cat-details-info {
+    padding: 25px;
+    border-radius: 25px;
+  }
+
+  .cat-details-info h3 {
+    font-size: 22px;
+  }
+
+  .cat-details-info p {
+    font-size: 14px;
+  }
+
+  /* RATINGS → STACK */
+  .cat-details-ratings {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .cat-details-ratings div {
+    padding: 20px;
+  }
+
+  .cat-details-ratings p {
+    font-size: 16px;
+  }
+
+  .cat-details-info .adopt-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+  }
 }

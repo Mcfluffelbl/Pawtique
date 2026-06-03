@@ -11,7 +11,8 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   transition: transform 0.2s;
 }
 
@@ -71,4 +72,54 @@
 
 .catcard-content .link:hover {
   background-color: #0056b3;
+}
+
+/*TABLET*/
+
+@media (max-width: 1024px) {
+
+  .catcard {
+    width: 260px;
+  }
+
+  .catcard-content h3 {
+    font-size: 1.3em;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .catcard-container {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .catcard {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .catcard img {
+    height: 180px;
+  }
+
+  .catcard-content {
+    padding: 12px;
+  }
+
+  .catcard-content h3 {
+    font-size: 1.2em;
+  }
+
+  .catcard-content p {
+    font-size: 14px;
+  }
+
+  .catcard-content .link {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
 }
