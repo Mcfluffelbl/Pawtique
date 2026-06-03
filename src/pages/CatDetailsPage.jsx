@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import "../styles/CatDetailsPage.css"
 
 function CatDetailsPage() {
   const { id } = useParams();
@@ -27,29 +28,89 @@ function CatDetailsPage() {
   if (!cat) return <p>Loading...</p>;
 
   return (
-    <div className="cat-details-page">
-      <section className="cat-details-header">
-        <h1>{cat.name}</h1>
-      </section>
+  <div className="cat-details-page">
+    
+    <section className="cat-hero">
+      
+      <div className="cat-hero-text">
+        <h1>
+          Meet <span>{cat.name}</span>
+        </h1>
 
-      <section className="cat-details-content">
-        <img
-          src={
-            cat.reference_image_id
-              ? `https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`
-              : ""
-          }
-          alt={cat.name}
-        />
+        <p>
+          {cat.description}
+        </p>
+      </div>
 
-        <p>Origin: {cat.origin}</p>
-        <p>Temperament: {cat.temperament}</p>
-        <p>Description: {cat.description}</p>
+      <img
+        src={
+          cat.reference_image_id
+            ? `https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`
+            : ""
+        }
+        alt={cat.name}
+      />
+    </section>
 
-        <button>Adopt Me</button>
-      </section>
-    </div>
-  );
+    <section className="cat-info">
+      <h3>Breed Info</h3>
+
+      <p>Origin: {cat.origin}</p>
+      <p>Temperament: {cat.temperament}</p>
+      <p>Life Span: {cat.life_span} years</p>
+
+      <div className="cat-details-ratings">
+        <div>
+          <h4>Intelligence</h4>
+          <p>{cat.intelligence}</p>
+        </div>
+
+        <div>
+          <h4>Affection</h4>
+          <p>{cat.affection_level}</p>
+        </div>
+
+        <div>
+          <h4>Energy</h4>
+          <p>{cat.energy_level}</p>
+        </div>
+
+        <div>
+          <h4>Dog Friendly</h4>
+          <p>{cat.dog_friendly}</p>
+        </div>
+
+        <div>
+          <h4>Child Friendly</h4>
+          <p>{cat.child_friendly}</p>
+        </div>
+
+        <div>
+          <h4>Grooming</h4>
+          <p>{cat.grooming}</p>
+        </div>
+
+        <div>
+          <h4>Health Issues</h4>
+          <p>{cat.health_issues}</p>
+        </div>
+
+        <div>
+          <h4>Social Needs</h4>
+          <p>{cat.social_needs}</p>
+        </div>
+
+        <div>
+          <h4>Stranger Friendly</h4>
+          <p>{cat.stranger_friendly}</p>
+        </div>
+      </div>
+
+      <button>Adopt Me</button>
+    </section>
+
+  </div>
+  )
 }
 
 export default CatDetailsPage;

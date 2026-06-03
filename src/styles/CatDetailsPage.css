@@ -1,0 +1,105 @@
+.cat-details-page {
+  padding: 40px 80px;
+  background: #fffafc;
+  min-height: 100vh;
+}
+
+.cat-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #fdf2f8, #f3e8ff);
+  border-radius: 35px;
+  padding: 50px;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.cat-hero-text {
+  flex: 1;
+}
+
+.cat-hero-text h1 {
+  font-size: 65px;
+  line-height: 1.1;
+  color: #111827;
+  margin-bottom: 25px;
+}
+
+.cat-hero-text span {
+  color: #7c3aed;
+}
+
+.cat-hero-text p {
+  color: #555;
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.cat-hero img {
+  width: 500px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.cat-info {
+  background: linear-gradient(to right, #f3e8ff, #fdf2f8);
+  border-radius: 35px;
+  padding: 40px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.cat-info h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.cat-info p {
+  color: #555;
+  line-height: 1.7;
+}
+
+.cat-details-ratings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.cat-details-ratings button {
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #7c3aed;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.cat-details-ratings div {
+  background: white;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.cat-details-ratings h4 {
+  font-size: 20px;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.cat-details-ratings p {
+  color: #666;
+}
+
+
+
+.cat-details button:hover {
+  background-color: #6b21a8;
+}
