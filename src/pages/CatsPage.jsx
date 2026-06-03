@@ -32,12 +32,12 @@ function CatsPage() {
   }, []);
   
   const {
-  currentItems,
-  currentPage,
-  totalPages,
-  nextPage,
-  previousPage,
-} = usePagination(cats, 10);
+    currentItems,
+    currentPage,
+    totalPages,
+    nextPage,
+    previousPage,
+  } = usePagination(cats, 10);
 
   return (
   <div className="cats-page">

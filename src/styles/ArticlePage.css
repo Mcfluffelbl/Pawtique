@@ -86,3 +86,72 @@
   line-height: 1.9;
   color: #555;
 }
+
+/* TABLETS (≤ 1024px) */
+
+@media (max-width: 1024px) {
+
+  .article-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    gap: 30px;
+  }
+
+  .article-hero img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+    margin: 0 auto;
+  }
+}
+
+/* MOBILE (≤ 768px) */
+
+@media (max-width: 768px) {
+
+  .article-hero {
+    padding: 25px;
+    border-radius: 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .article-tag {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .article-content {
+    padding: 25px;
+    border-radius: 20px;
+  }
+
+  .article-intro {
+    font-size: 18px;
+  }
+
+  .article-content h2 {
+    font-size: 24px;
+  }
+
+  .article-content p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
