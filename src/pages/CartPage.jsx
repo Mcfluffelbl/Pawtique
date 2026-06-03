@@ -1,3 +1,4 @@
+import { link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
 import "../styles/CartPage.css";
@@ -103,13 +104,17 @@ function CartPage() {
             <h3>{total.toFixed(2)}</h3>
           </div>
 
-          <Link to="/checkout">
-            <button className="checkout-btn">
+          {isEmpty ? (
+            <button className="checkout-btn" onClick={() => alert("Your cart is empty! Browse our cats to add some.")}>
               <Lock />
               Proceed to Checkout
             </button>
-          </Link>
-
+          ) : (
+            <Link to="/checkout">
+              <button className="checkout-btn"><Lock />Proceed to Checkout</button>
+            </Link>
+          )}
+          
           <div className="cart-features">
 
             <div>
