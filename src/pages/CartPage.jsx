@@ -19,7 +19,15 @@ function CartPage() {
   const isEmpty = cart.length === 0;
   const catCount = cart.length;
   const subtotal = cart.length * 10;
-  const shipping = cart.length > 0 ? 4.99 : 0;
+
+  let shipping = 0;
+
+  if (subtotal > 0 && subtotal < 49) {
+  shipping = 4.99;
+  } else if (subtotal >= 50) {
+  shipping = 0;
+  }
+
   const total = subtotal + shipping;
 
   return (
@@ -74,8 +82,12 @@ function CartPage() {
 
           <div className="summary-line">
             <p>Shipping</p>
-            <p>{shipping.toFixed(2)}</p>
+            <p>{shipping === 0 ? "Free" : `${shipping}`}</p>
           </div>
+
+          {subtotal < 49 && subtotal > 0 && (
+          <p>Add ${(49 - subtotal).toFixed(2)} more for free shipping!</p>
+          )}
 
           <hr />
 
