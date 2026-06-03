@@ -1,9 +1,10 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../styles/CatDetailsPage.css"
 
 function CatDetailsPage() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [cat, setCat] = useState(null);
 
   useEffect(() => {
@@ -29,6 +30,11 @@ function CatDetailsPage() {
 
   return (
   <div className="cat-details-page">
+
+    <button className="cat-details-back-btn" onClick={() => navigate("/cats")}
+      >
+            &larr; Back to Cats
+    </button>
     
     <section className="cat-hero">
       

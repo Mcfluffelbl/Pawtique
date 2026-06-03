@@ -1,3 +1,5 @@
+import { useCart } from "../context/CartContext";
+
 import "../styles/CartPage.css";
 
 import {
@@ -13,6 +15,11 @@ import {
 import { Link } from "react-router-dom";
 
 function CartPage() {
+  const { cart, removeFromCart } = useCart();
+  const subtotal = cart.length;
+  const shipping = cart.length > 0 ? 1 : 0;
+  const total = subtotal + shipping;
+
   return (
     <div className="cart-page">
 
@@ -20,73 +27,30 @@ function CartPage() {
         <h1>
           Your Cart <Cart />
         </h1>
-
-        <p>Home / Cart</p>
       </div>
 
       <div className="cart-container">
 
         <div className="cart-items">
 
-          <div className="cart-item">
-
-            <img
-              src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=600&auto=format&fit=crop"
-              alt="tabby cat"
-            />
+          {cart.map((cat) => (
+          <div className="cart-item" key={cat.id}>
+            <img src={`https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`}
+                 alt={cat.name}
+             />
 
             <div className="item-details">
-              <h2>Tabby</h2>
-              <p>Norway</p>
-            </div>
-
-            <div className="item-price">
-              <h3>1</h3>
+              <h2>{cat.name}</h2>
+              <p>{cat.origin}</p>
             </div>
 
             <div className="item-quantity">
-              <button>-</button>
               <span>1</span>
-              <button>+</button>
             </div>
 
-            <div className="item-total">
-              <h3>1</h3>
-            </div>
-
-            <Trash className="delete-icon" />
-
+            <Trash className="delete-icon" onClick={() => removeFromCart(cat.id)}/>
           </div>
-
-          <div className="cart-item">
-
-            <img
-              src="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=600&auto=format&fit=crop"
-              alt="calico cat"
-            />
-
-            <div className="item-details">
-              <h2>Calico</h2>
-              <p>Germany</p>
-            </div>
-
-            <div className="item-price">
-              <h3>1</h3>
-            </div>
-
-            <div className="item-quantity">
-              <button>-</button>
-              <span>1</span>
-              <button>+</button>
-            </div>
-
-            <div className="item-total">
-              <h3>1</h3>
-            </div>
-
-            <Trash className="delete-icon" />
-
-          </div>
+))}
 
           <Link to="/shop">
             <button className="continue-btn">
@@ -103,19 +67,19 @@ function CartPage() {
 
           <div className="summary-line">
             <p>Subtotal</p>
-            <p>2</p>
+            <p>{subtotal.toFixed(2)}</p>
           </div>
 
           <div className="summary-line">
             <p>Shipping</p>
-            <p>$4.99</p>
+            <p>{shipping.toFixed(2)}</p>
           </div>
 
           <hr />
 
           <div className="summary-total">
             <h3>Total</h3>
-            <h3>2</h3>
+            <h3>{total}</h3>
           </div>
 
           <Link to="/checkout">

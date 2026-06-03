@@ -2,18 +2,19 @@ import { useState, useEffect } from "react"
 import Pagination from "../components/Pagination";
 import { usePagination } from "../hooks/usePagination";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 import "../styles/CatsPage.css"
 
 function CatsPage() {
   const [cats, setCats] = useState([]);
   const navigate = useNavigate();
-
+  const { addToCart } = useCart();
   useEffect(() => {
     async function fetchCats() {
       try {
         const response = await fetch(
-          "https://api.thecatapi.com/v1/breeds?limit=30"
+          "https://api.thecatapi.com/v1/breeds?limit=200"
         );
 
         if (!response.ok) {
@@ -79,7 +80,7 @@ function CatsPage() {
               Temperament: {cat.temperament}
             </p>
             <button onClick={() => navigate(`/catDetailPage/${cat.id}`)}>Meet Me</button>
-            <button onClick={() => {}}>Adopt Me</button>
+            <button onClick={() => addToCart(cat)}>Adopt Me</button>
           </div>
         </div>
       ))}

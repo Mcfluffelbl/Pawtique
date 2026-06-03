@@ -11,7 +11,7 @@ function CatApi() {
     async function fetchCats() {
       try {
         const response = await fetch(
-          "https://api.thecatapi.com/v1/breeds?limit=30"
+          "https://api.thecatapi.com/v1/breeds?limit=200"
         );
 
         if (!response.ok) {
