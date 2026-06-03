@@ -1,5 +1,6 @@
-import { link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "../styles/CartPage.css";
 
@@ -12,8 +13,6 @@ import {
   EmojiSmileFill,
   Trash,
 } from "react-bootstrap-icons";
-
-import { Link } from "react-router-dom";
 
 function CartPage() {
   const { cart, removeFromCart } = useCart();
@@ -30,6 +29,42 @@ function CartPage() {
   }
 
   const total = subtotal + shipping;
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    address: "",
+  });
+
+  function handleChange(e) {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (isEmpty) {
+      alert("Your cart is empty!");
+      return;
+    }
+
+    alert(
+      `Order confirmed!\n\nName: ${formData.name}\nEmail: ${formData.email}\nAddress: ${formData.address}`
+    );
+
+    setIsModalOpen(false);
+
+    setFormData({
+      name: "",
+      email: "",
+      address: "",
+    });
+  }
 
   return (
     <div className="cart-page">
@@ -49,7 +84,7 @@ function CartPage() {
             <h2>Your cart is empty</h2>
             <p>Browse our adorable cats and add them to your cart!</p>
           </div>
-        ) : null}
+          ) : null}
 
           {cart.map((cat) => (
           <div className="cart-item" key={cat.id}>
@@ -68,7 +103,7 @@ function CartPage() {
 
             <Trash className="delete-icon" onClick={() => removeFromCart(cat.id)}/>
           </div>
-))}
+          ))}
 
           <Link to="/cats">
             <button className="continue-btn">
@@ -104,16 +139,18 @@ function CartPage() {
             <h3>{total.toFixed(2)}</h3>
           </div>
 
-          {isEmpty ? (
-            <button className="checkout-btn" onClick={() => alert("Your cart is empty! Browse our cats to add some.")}>
-              <Lock />
-              Proceed to Checkout
-            </button>
-          ) : (
-            <Link to="/checkout">
-              <button className="checkout-btn"><Lock />Proceed to Checkout</button>
-            </Link>
-          )}
+          <button className="checkout-btn" onClick={() => {
+            if (isEmpty) {
+              alert("Your cart is empty! Add items before checkout.");
+              return;
+              }
+
+              setIsModalOpen(true);
+            }}
+          >
+            <Lock />
+            Proceed to Checkout
+          </button>
           
           <div className="cart-features">
 
@@ -138,8 +175,48 @@ function CartPage() {
 
       </div>
 
+      {isModalOpen && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <h2>Checkout</h2>
+
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+
+              <textarea
+                name="address"
+                placeholder="Delivery address"
+                value={formData.address}
+                onChange={handleChange}
+                required
+              />
+
+              <button type="submit" className="checkout-btn">Place Order</button>
+
+              <button type="button" onClick={() => setIsModalOpen(false)}> Cancel</button>
+            </form>
+          </div>
+        </div>
+      )} 
+
     </div>
-  );
+  )
 }
 
 export default CartPage;
