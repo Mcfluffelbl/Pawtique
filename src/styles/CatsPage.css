@@ -52,21 +52,23 @@
 
 /* SEARCH */
 
-.search-bar {
+.search-Cat-bar {
   margin-left: auto;
   display: flex;
   gap: 10px;
+  width: 30%;
 }
 
-.search-bar input {
-  padding: 14px;
+.search-Cat-bar input {
+  padding: 4px;
   border-radius: 14px;
   border: 2px solid #e9d5ff;
-  width: 260px;
+  width: 100%;
   font-size: 16px;
 }
 
-.search-bar button {
+.search-Cat-bar button {
+  margin-left: auto;
   padding: 14px 22px;
   border: none;
   border-radius: 14px;
@@ -79,9 +81,23 @@
 
 .cats-list-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 30px;
   margin-bottom: 60px;
+}
+
+/* tablet */
+@media (max-width: 1000px) {
+  .cats-list-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* mobile */
+@media (max-width: 650px) {
+  .cats-list-section {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* CARD */
@@ -92,6 +108,9 @@
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .cat-card:hover {
@@ -106,6 +125,9 @@
 
 .cat-info {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .cat-info h3 {
@@ -119,16 +141,19 @@
 }
 
 .cat-info button {
+  margin-top: auto;
   width: 100%;
   padding: 14px;
-  margin-top: 10px;
-  margin-bottom: 10px;
   border: none;
   border-radius: 12px;
   background: #7c3aed;
   color: white;
   font-size: 16px;
   cursor: pointer;
+}
+
+.cat-info button + button {
+  margin-top: 12px;
 }
 
 .cat-info button:hover {

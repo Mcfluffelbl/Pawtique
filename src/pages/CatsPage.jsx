@@ -55,7 +55,7 @@ function CatsPage() {
     </section>
 
     <section className="top-controls">
-      <div className="search-bar">
+      <div className="search-Cat-bar">
         <input type="text" placeholder="Search for cats..." />
         <button>Search</button>
       </div>
