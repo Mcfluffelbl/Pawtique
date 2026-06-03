@@ -43,7 +43,9 @@
   object-fit: cover;
 }
 
-.cat-info {
+/* DETAILS INFO */
+
+.cat-details-info {
   background: linear-gradient(to right, #f3e8ff, #fdf2f8);
   border-radius: 35px;
   padding: 40px;
@@ -51,33 +53,29 @@
   text-align: center;
 }
 
-.cat-info h3 {
+.cat-details-info h3 {
   font-size: 28px;
   margin-bottom: 10px;
   color: #111827;
 }
 
-.cat-info p {
+.cat-details-info p {
   color: #555;
   line-height: 1.7;
 }
 
-.cat-details-ratings {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
+.cat-details-info p span {
+  font-weight: 600;
+  color: #7c3aed;
 }
 
-.cat-details-ratings button {
-  padding: 0.8rem 1.5rem;
-  cursor: pointer;
-  color: #ffffff;
-  background-color: #7c3aed;
-  border: none;
-  border-radius: 0.75rem;
-  font-size: 16px;
-  transition: 0.2s;
+/* RATINGS */
+
+.cat-details-ratings {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 25px;
 }
 
 .cat-details-ratings div {
@@ -85,7 +83,7 @@
   padding: 30px;
   border-radius: 25px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .cat-details-ratings h4 {
@@ -96,10 +94,24 @@
 
 .cat-details-ratings p {
   color: #666;
+  font-size: 20px;
 }
 
+/* ADOPT BUTTON */
 
+.cat-details-info .adopt-btn {
+  padding: 14px 28px;
+  width: 60%;
+  margin-top: 30px;
+  border: none;
+  border-radius: 14px;
+  background: #7c3aed;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
 
-.cat-details button:hover {
-  background-color: #6b21a8;
+.cat-details-info .adopt-btn:hover {
+  background: #6d28d9;
 }

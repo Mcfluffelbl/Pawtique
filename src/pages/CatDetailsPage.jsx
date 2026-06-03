@@ -52,12 +52,13 @@ function CatDetailsPage() {
       />
     </section>
 
-    <section className="cat-info">
+    <section className="cat-details-info">
       <h3>Breed Info</h3>
 
-      <p>Origin: {cat.origin}</p>
-      <p>Temperament: {cat.temperament}</p>
-      <p>Life Span: {cat.life_span} years</p>
+      <p><span>Origin:</span> {cat.origin}</p>
+      <p><span>Temperament:</span> {cat.temperament}</p>
+      <p><span>Life Span:</span> {cat.life_span} years</p>
+      <p><span>Weight:</span> {cat.weight.metric} kg</p>
 
       <div className="cat-details-ratings">
         <div>
@@ -104,9 +105,25 @@ function CatDetailsPage() {
           <h4>Stranger Friendly</h4>
           <p>{cat.stranger_friendly}</p>
         </div>
+
+        <div>
+          <h4>Vocalisation</h4>
+          <p>{cat.vocalisation}</p>
+        </div>
+
+        <div>
+          <h4>Shedding Level</h4>
+          <p>{cat.shedding_level}</p>
+        </div>
+
+        <div>
+          <h4>Adaptability</h4>
+          <p>{cat.adaptability}</p>
+        </div>
+
       </div>
 
-      <button>Adopt Me</button>
+      <button className="adopt-btn">Adopt Me</button>
     </section>
 
   </div>
