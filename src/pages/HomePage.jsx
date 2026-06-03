@@ -112,7 +112,7 @@ function HomePage() {
 
           <div className="product-card">
             <img
-              src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?q=80&w=600&auto=format&fit=crop"
+              src="https://media.zooplus.com/bilder/7/400/71629_pla_whiskas_1_huhn_7kg_1000x1000_hs_01_7.jpg?width=400&format=webp"
               alt="cat food"
             />
 
@@ -125,7 +125,7 @@ function HomePage() {
 
           <div className="product-card">
             <img
-              src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?q=80&w=600&auto=format&fit=crop"
+              src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQuu-jEqDTa4LLSC2Q9XOyzOxDrK7GOaAgQPlwwpEBmQEaYYoRgEU77IDpQ_DTVuVE6Iwwa-lRKh9hL_zyis_I0Km4fGggpnF61VEf-KFd14uyG4vhSzHsAGdM03fOrsL5s6lbfDGpFmTc&usqp=CAc"
               alt="toy"
             />
 
@@ -157,7 +157,7 @@ function HomePage() {
 
           <div className="tip-card">
             <img
-              src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?q=80&w=600&auto=format&fit=crop"
+              src="https://pet-health-content-media.chewy.com/wp-content/uploads/2020/07/19224455/how-much-to-feed-kittens-1024x576.jpg"
               alt="tips"
             />
 
