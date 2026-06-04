@@ -134,6 +134,28 @@
   background: #6d28d9;
 }
 
+.adopt-btn {
+  background: #7c3aed;
+  color: white;
+}
+
+.in-cart-btn {
+  padding: 14px 28px;
+  width: 60%;
+  margin-top: 30px;
+  border: none;
+  border-radius: 14px;
+  background: #b3b1b6;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.in-cart-btn:hover {
+  background: #9ca3af;
+}
+
 /* TABLET (≤ 1024px) */
 
 @media (max-width: 1024px) {

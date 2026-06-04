@@ -9,7 +9,7 @@ import "../styles/CatsPage.css"
 function CatsPage() {
   const [cats, setCats] = useState([]);
   const navigate = useNavigate();
-  const { addToCart } = useCart();
+  const { cart, addToCart, removeFromCart } = useCart();
   useEffect(() => {
     async function fetchCats() {
       try {
@@ -63,27 +63,46 @@ function CatsPage() {
     </section>
 
     <section className="cats-list-section">
-      {currentItems.map((cat) => (
+      {currentItems.map((cat) => {
+        const isInCart = cart.some((item) => item.id === cat.id);
+
+        return (
         <div className="cat-card" key={cat.id}>
           {cat.reference_image_id && (
             <img
               src={`https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`}
               alt={cat.name}
-            />
-          )}
+          />
+        )}
 
-          <div className="cat-info">
-            <h3>{cat.name}</h3>
-            <p>
-              Origin: {cat.origin}
-              <br />
-              Temperament: {cat.temperament}
-            </p>
-            <button onClick={() => navigate(`/catDetailPage/${cat.id}`)}>Meet Me</button>
-            <button onClick={() => addToCart(cat)}>Adopt Me</button>
-          </div>
+        <div className="cat-info">
+          <h3>{cat.name}</h3>
+          <p>
+            Origin: {cat.origin}
+            <br />
+            Temperament: {cat.temperament}
+          </p>
+
+          <button onClick={() => navigate(`/catDetailPage/${cat.id}`)}>
+            Meet Me
+          </button>
+
+          <button
+            className={isInCart ? "in-cart-btn" : "adopt-btn"}
+            onClick={() => {
+              if (isInCart) {
+                removeFromCart(cat.id);
+              } else {
+                addToCart(cat);
+              }
+            }}
+          >
+            {isInCart ? " Remove from Cart" : "Adopt Me"}
+          </button>
         </div>
-      ))}
+      </div>
+    );
+     })}
     </section>
 
     <div className="page">

@@ -1,11 +1,14 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useCart } from "../context/CartContext";
+
 import "../styles/CatDetailsPage.css"
 
 function CatDetailsPage() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [cat, setCat] = useState(null);
+  const { addToCart, removeFromCart, cart } = useCart();
 
   useEffect(() => {
     async function fetchCat() {
@@ -27,6 +30,8 @@ function CatDetailsPage() {
   }, [id]);
 
   if (!cat) return <p>Loading...</p>;
+
+  const isInCart = cart.some((item) => item.id === cat?.id);
 
   return (
   <div className="cat-details-page">
@@ -129,7 +134,17 @@ function CatDetailsPage() {
 
       </div>
 
-      <button className="adopt-btn">Adopt Me</button>
+      <button
+        className={isInCart ? "in-cart-btn" : "adopt-btn"} onClick={() => {
+        if (isInCart) {
+          removeFromCart(cat.id);
+        } else {
+          addToCart(cat);
+        }
+        }}
+      >
+        {isInCart ? "Remove from Cart" : "Adopt Me"}
+      </button>
     </section>
 
   </div>
