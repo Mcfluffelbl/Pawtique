@@ -3,13 +3,16 @@ import Pagination from "../components/Pagination";
 import { usePagination } from "../hooks/UsePagination";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { Search } from "react-bootstrap-icons";
 
 import "../styles/CatsPage.css"
 
 function CatsPage() {
   const [cats, setCats] = useState([]);
+  const [search, setSearch] = useState("");
   const navigate = useNavigate();
   const { cart, addToCart, removeFromCart } = useCart();
+
   useEffect(() => {
     async function fetchCats() {
       try {
@@ -30,6 +33,10 @@ function CatsPage() {
 
     fetchCats();
   }, []);
+
+  const filteredCats = cats.filter((cat) =>
+    cat.name.toLowerCase().includes(search.toLowerCase())
+  );
   
   const {
     currentItems,
@@ -37,7 +44,7 @@ function CatsPage() {
     totalPages,
     nextPage,
     previousPage,
-  } = usePagination(cats, 10);
+  } = usePagination(filteredCats, 10);
 
   return (
   <div className="cats-page">
@@ -55,12 +62,17 @@ function CatsPage() {
       />
     </section>
 
-    <section className="top-controls">
-      <div className="search-Cat-bar">
-        <input type="text" placeholder="Search for cats..." />
-        <button>Search</button>
-      </div>
-    </section>
+     <section className="top-controls">
+        <div className="search-Cat-bar">
+          <Search className="search-icon"/>
+          <input
+            type="text"
+            placeholder="Search for cats..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+      </section>
 
     <section className="cats-list-section">
       {currentItems.map((cat) => {
