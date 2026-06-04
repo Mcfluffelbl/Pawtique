@@ -178,9 +178,14 @@ function CartPage() {
       {isModalOpen && (
         <div className="modal-overlay">
           <div className="modal">
+            <button className="cancel-button" onClick={() => setIsModalOpen(false)}>
+                Cancel
+            </button>
+
             <h2>Checkout</h2>
 
             <form onSubmit={handleSubmit}>
+              <h4>Name:</h4>
               <input
                 type="text"
                 name="name"
@@ -190,6 +195,7 @@ function CartPage() {
                 required
               />
 
+              <h4>Email:</h4>
               <input
                 type="email"
                 name="email"
@@ -199,6 +205,7 @@ function CartPage() {
                 required
               />
 
+              <h4>Address:</h4>
               <textarea
                 name="address"
                 placeholder="Delivery address"
@@ -208,8 +215,6 @@ function CartPage() {
               />
 
               <button type="submit" className="checkout-btn">Place Order</button>
-
-              <button type="button" onClick={() => setIsModalOpen(false)}> Cancel</button>
             </form>
           </div>
         </div>
