@@ -19,6 +19,7 @@ function CartPage() {
   const isEmpty = cart.length === 0;
   const catCount = cart.length;
   const subtotal = cart.length * 10;
+  const breeds = cart.map((cat) => cat.name).join(", ");
 
   let shipping = 0;
 
@@ -54,7 +55,7 @@ function CartPage() {
     }
 
     alert(
-      `Order confirmed!\n\nName: ${formData.name}\nEmail: ${formData.email}\nAddress: ${formData.address}`
+      `Order confirmed!\n\nName: ${formData.name}\nEmail: ${formData.email}\nAddress: ${formData.address}\n\nTotal: $${total.toFixed(2)}\nCat breeds adopted: ${breeds} \nCats adopted: ${catCount}\n\nThank you for adopting a cat from Pawtique!`
     );
 
     clearCart();
