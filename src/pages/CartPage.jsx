@@ -15,7 +15,7 @@ import {
 } from "react-bootstrap-icons";
 
 function CartPage() {
-  const { cart, removeFromCart } = useCart();
+  const { cart, removeFromCart, clearCart } = useCart();
   const isEmpty = cart.length === 0;
   const catCount = cart.length;
   const subtotal = cart.length * 10;
@@ -56,6 +56,8 @@ function CartPage() {
     alert(
       `Order confirmed!\n\nName: ${formData.name}\nEmail: ${formData.email}\nAddress: ${formData.address}`
     );
+
+    clearCart();
 
     setIsModalOpen(false);
 
