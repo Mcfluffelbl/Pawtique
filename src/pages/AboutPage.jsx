@@ -23,8 +23,8 @@ function AboutPage() {
         </div>
 
         <img
-          src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?q=80&w=1200&auto=format&fit=crop"
-          alt="Cute cat"
+          src="https://www.salesforce.com/blog/wp-content/uploads/sites/2/2020/08/About-Us-Page.jpg"
+          alt="desk and plant"
         />
 
       </section>

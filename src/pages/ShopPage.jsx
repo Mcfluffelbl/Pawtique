@@ -33,7 +33,7 @@ function ShopPage() {
         </div>
 
         <img
-          src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?q=80&w=1200&auto=format&fit=crop"
+          src="https://www.thecatvet.ae/wp-content/uploads/2022/08/shutterstock_358973213-870x432-1.jpg"
           alt="Cute cat"
         />
 

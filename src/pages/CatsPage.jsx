@@ -57,7 +57,7 @@ function CatsPage() {
       </div>
 
       <img
-        src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?q=80&w=1200&auto=format&fit=crop"
+        src="https://cdn.royalcanin-weshare-online.io/yj8HdHUBRYZmsWpckZgn/v1/ec9h-how-to-care-for-a-kitten-or-cat-hero-new-resized"
         alt="Cute cat"
       />
     </section>

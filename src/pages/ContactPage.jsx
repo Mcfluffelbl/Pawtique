@@ -30,8 +30,8 @@ function ContactPage() {
         </div>
 
         <img
-          src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?q=80&w=1200&auto=format&fit=crop"
-          alt="Cute cat"
+          src="https://t4.ftcdn.net/jpg/02/85/11/01/360_F_285110178_yUj7sFp89xPArBzrUnZ1qGP0TPLnDwr2.jpg"
+          alt="Contact us"
         />
 
       </section>
