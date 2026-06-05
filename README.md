@@ -1,6 +1,9 @@
 # 🐾Pawtique
 Pawtique is a modern React web application where users can browse cat breeds, adopt cats, and shop cat-related products. The goal of the project is to simulate a real e-commerce experience with a clean UI and interactive features, using react.
 
+# Website
+https://pawtique.vercel.app/
+
 # Features
 ## Cat Adoption
 - Browse a list of cat breeds
