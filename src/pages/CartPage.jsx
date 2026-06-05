@@ -2,6 +2,7 @@ import { useCart } from "../context/CartContext";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import CatImage from "../components/CatImage";
 import "../styles/CartPage.css";
 
 import {
@@ -91,9 +92,10 @@ function CartPage() {
 
           {cart.map((cat) => (
           <div className="cart-item" key={cat.id}>
-            <img src={`https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`}
-                 alt={cat.name}
-             />
+            <CatImage
+              src={`https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`}
+              alt={cat.name}
+            />
 
             <div className="item-details">
               <h2>{cat.name}</h2>

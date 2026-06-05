@@ -43,7 +43,18 @@ function CatApi() {
       {cats.map((cat) => (
         <div key={cat.id}>
           <h2>{cat.name}</h2>
-          <img src={`https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`} alt={cat.name} width="200" />
+          <img
+            src={
+              cat.reference_image_id
+                ? `https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`
+                : catSilhouette
+            }
+            alt={cat.name}
+            width="200"
+            onError={(e) => {
+              e.target.src = catSilhouette;
+            }}
+          />
           <p>{cat.origin}</p>
           <p>{cat.temperament}</p>
         </div>

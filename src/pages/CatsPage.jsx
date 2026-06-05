@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { Search } from "react-bootstrap-icons";
 
+import CatImage from "../components/CatImage";
 import "../styles/CatsPage.css"
 
 function CatsPage() {
@@ -80,12 +81,10 @@ function CatsPage() {
 
         return (
         <div className="cat-card" key={cat.id}>
-          {cat.reference_image_id && (
-            <img
-              src={`https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`}
-              alt={cat.name}
+          <CatImage
+            src={`https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`}
+            alt={cat.name}
           />
-        )}
 
         <div className="cat-info">
           <h3>{cat.name}</h3>

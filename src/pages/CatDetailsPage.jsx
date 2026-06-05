@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useCart } from "../context/CartContext";
 
+import CatImage from "../components/CatImage";
 import "../styles/CatDetailsPage.css"
 
 function CatDetailsPage() {
@@ -53,12 +54,8 @@ function CatDetailsPage() {
         </p>
       </div>
 
-      <img
-        src={
-          cat.reference_image_id
-            ? `https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`
-            : ""
-        }
+      <CatImage
+        src={`https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`}
         alt={cat.name}
       />
     </section>
