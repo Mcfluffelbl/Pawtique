@@ -3,7 +3,7 @@ Pawtique is a modern React web application where users can browse cat breeds, ad
 
 # Website
 - Site built using vercel.com
-https://pawtique.vercel.app/
+- https://pawtique.vercel.app/
 
 # Features
 ## Cat Adoption
