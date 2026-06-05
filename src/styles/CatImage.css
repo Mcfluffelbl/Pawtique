@@ -1,0 +1,7 @@
+.fallback-image {
+  width: 40% !important;
+  height: 40% !important;
+  object-fit: contain !important;
+  margin: 20px auto;
+  display: block;
+}
