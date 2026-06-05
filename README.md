@@ -111,10 +111,10 @@ This project uses:
 - Dark mode
 
 # Installation
-git clone https://github.com/yourusername/pawtique.git
-cd pawtique
-npm install
-npm run dev
+- git clone https://github.com/yourusername/pawtique.git
+- cd pawtique
+- npm install
+- npm run dev
 
 # 🧡 About the Project
 This project was built as a learning project to practice:
