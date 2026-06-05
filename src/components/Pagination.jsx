@@ -1,5 +1,7 @@
+// Import CSS style for pagination
 import "../styles/Pagination.css";
 
+// Component pageing
 function Pagination({
   currentPage,
   totalPages,

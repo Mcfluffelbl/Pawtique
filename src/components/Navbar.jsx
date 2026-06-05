@@ -1,11 +1,11 @@
 import { useCart } from '../context/CartContext';
-
-import "../styles/NavBar.css";
-
 import { Link } from 'react-router-dom'
-
 import { Cart } from 'react-bootstrap-icons'
 
+// Import CSS for navbar
+import "../styles/NavBar.css";
+
+// Navbar component
 function Navbar() {
   const { cart } = useCart();
   const catCount = cart.length;
@@ -13,10 +13,12 @@ function Navbar() {
   return (
     <nav className="navbar">
 
+       {/* Navbar Logo */}
       <div className="logo">
         <Link to="/">🐾Pawtique</Link>
       </div>
 
+       {/* Navbar Links */}
       <div className="links">
         <Link to="/">Home</Link>
         <Link to="/cats">Cats</Link>
@@ -27,6 +29,7 @@ function Navbar() {
         <Link to="/contact">Contact</Link>
       </div>
 
+      {/* Navbar Cart Link */}
       <div className="linkleft">
         <Link to="/cart" className="cart-link">
           <Cart className="cart-icon" />

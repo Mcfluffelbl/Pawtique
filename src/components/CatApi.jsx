@@ -1,12 +1,17 @@
 import { useState, useEffect } from "react";
+// Hook for pagination logic (splits the list into pages)
 import { usePagination } from "../hooks/UsePagination";
+// Pagination component 
 import Pagination from "../components/Pagination";
 
+// CSS for the catcards
 import "../styles/CatApi.css";
 
 function CatApi() {
+  // State that stores all the cats from the cat API
   const [cats, setCats] = useState([]);
 
+  // Fetches data from the cat API
   useEffect(() => {
     async function fetchCats() {
       try {
@@ -28,21 +33,24 @@ function CatApi() {
     fetchCats();
   }, []);
 
+  // Pagination logic
   const {
     currentItems,
     currentPage,
     totalPages,
     nextPage,
     previousPage,
-  } = usePagination(cats, 6);
+  } = usePagination(cats, 10);
 
   return (
     <div className="catcard-container">
       <h1>Cat Breeds</h1>
 
-      {cats.map((cat) => (
+      {/* Render all the cats */}
+      {currentItems.map((cat) => (
         <div key={cat.id}>
           <h2>{cat.name}</h2>
+          {/* Cat img with fallback */}
           <img
             src={
               cat.reference_image_id
@@ -60,6 +68,7 @@ function CatApi() {
         </div>
       ))}
       
+      {/* Pagination controls */}
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}
