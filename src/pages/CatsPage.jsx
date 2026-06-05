@@ -9,11 +9,15 @@ import CatImage from "../components/CatImage";
 import "../styles/CatsPage.css"
 
 function CatsPage() {
+  // Stores all cats fetched from API
   const [cats, setCats] = useState([]);
+  // Search input state (filters cats by name)
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
+  // Cart functions from context
   const { cart, addToCart, removeFromCart } = useCart();
 
+  // Fetch cats once when page loads
   useEffect(() => {
     async function fetchCats() {
       try {
@@ -35,10 +39,12 @@ function CatsPage() {
     fetchCats();
   }, []);
 
+  // Filter cats based on search input
   const filteredCats = cats.filter((cat) =>
     cat.name.toLowerCase().includes(search.toLowerCase())
   );
   
+  // Pagination runs on filtered results
   const {
     currentItems,
     currentPage,
@@ -49,6 +55,8 @@ function CatsPage() {
 
   return (
   <div className="cats-page">
+    
+    {/* HERO SECTION */}
     <section className="hero-cats-section">
       <div className="hero-text">
         <h1>
@@ -63,9 +71,11 @@ function CatsPage() {
       />
     </section>
 
+     {/* SEARCH BAR */}
      <section className="top-controls">
         <div className="search-Cat-bar">
           <Search className="search-icon"/>
+          {/* Controlled input connected to search state */}
           <input
             type="text"
             placeholder="Search for cats..."
@@ -75,12 +85,14 @@ function CatsPage() {
         </div>
       </section>
 
+    {/* CAT GRID */}
     <section className="cats-list-section">
       {currentItems.map((cat) => {
         const isInCart = cart.some((item) => item.id === cat.id);
 
         return (
         <div className="cat-card" key={cat.id}>
+          {/* Cat image component with fallback handling */}
           <CatImage
             src={`https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`}
             alt={cat.name}
@@ -94,10 +106,12 @@ function CatsPage() {
             Temperament: {cat.temperament}
           </p>
 
+          {/* Navigate to details page */}
           <button onClick={() => navigate(`/catDetailPage/${cat.id}`)}>
             Meet Me
           </button>
 
+          {/* Add/Remove from cart toggle button */}
           <button
             className={isInCart ? "in-cart-btn" : "adopt-btn"}
             onClick={() => {
@@ -116,6 +130,7 @@ function CatsPage() {
      })}
     </section>
 
+    {/* PAGINATION CONTROLS */}
     <div className="page">
       <button onClick={previousPage} disabled={currentPage === 1}>
         Previous Page

@@ -1,5 +1,6 @@
 import "../styles/ContactPage.css";
 
+// Icons from react-bootstrap-icons
 import {
   Envelope,
   Telephone,
@@ -24,7 +25,7 @@ function ContactPage() {
 
           <p>
             Whether you have a question about adoption,
-            our products, or anything else — we’re here to help.
+            our products, or anything else — we're here to help.
           </p>
 
         </div>

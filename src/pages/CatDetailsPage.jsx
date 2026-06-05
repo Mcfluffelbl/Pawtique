@@ -6,11 +6,16 @@ import CatImage from "../components/CatImage";
 import "../styles/CatDetailsPage.css"
 
 function CatDetailsPage() {
+  // Get cat ID from URL parameters
   const { id } = useParams();
+  // Navigation hook (used for "back to cats")
   const navigate = useNavigate();
+  // State for storing fetched cat data
   const [cat, setCat] = useState(null);
+   // Cart functions from context
   const { addToCart, removeFromCart, cart } = useCart();
 
+  // Fetch single cat breed when page loads or ID changes
   useEffect(() => {
     async function fetchCat() {
       try {
@@ -30,18 +35,22 @@ function CatDetailsPage() {
     fetchCat();
   }, [id]);
 
+  // Loading state while fetching data
   if (!cat) return <p>Loading...</p>;
 
+  // Check if current cat is already in cart
   const isInCart = cart.some((item) => item.id === cat?.id);
 
   return (
   <div className="cat-details-page">
 
+    {/* BACK BUTTON */}
     <button className="cat-details-back-btn" onClick={() => navigate("/cats")}
       >
             &larr; Back to Cats
     </button>
     
+     {/* HERO SECTION */}
     <section className="cat-hero">
       
       <div className="cat-hero-text">
@@ -54,20 +63,24 @@ function CatDetailsPage() {
         </p>
       </div>
 
+      {/* Cat image (with fallback via CatImage component) */}
       <CatImage
         src={`https://cdn2.thecatapi.com/images/${cat.reference_image_id}.jpg`}
         alt={cat.name}
       />
     </section>
 
+    {/* DETAILS SECTION */}
     <section className="cat-details-info">
       <h3>Breed Info</h3>
 
+      {/* Basic info */}
       <p><span>Origin:</span> {cat.origin}</p>
       <p><span>Temperament:</span> {cat.temperament}</p>
       <p><span>Life Span:</span> {cat.life_span} years</p>
       <p><span>Weight:</span> {cat.weight.metric} kg</p>
 
+      {/* Ratings grid */}
       <div className="cat-details-ratings">
         <div>
           <h4>Intelligence</h4>
@@ -131,6 +144,7 @@ function CatDetailsPage() {
 
       </div>
 
+      {/* Add/Remove from cart button */}
       <button
         className={isInCart ? "in-cart-btn" : "adopt-btn"} onClick={() => {
         if (isInCart) {
