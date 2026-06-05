@@ -13,6 +13,7 @@ function ShopPage() {
   return (
     <div className="shop-page">
 
+      {/* HERO SECTION */}
       <section className="shop-hero">
 
         <div className="shop-hero-text">
@@ -39,8 +40,10 @@ function ShopPage() {
 
       </section>
 
+      {/* FILTER + SEARCH CONTROLS */}
       <section className="shop-controls">
 
+        {/* Category filter buttons (Mockup) */}
         <div className="categories">
 
           <button className="active">
@@ -55,6 +58,7 @@ function ShopPage() {
 
         </div>
 
+        {/* Search bar */}
         <div className="search-bar">
 
           <input
@@ -68,6 +72,7 @@ function ShopPage() {
 
       </section>
 
+       {/* PRODUCTS GRID */}
       <section className="products-grid">
 
         <div className="product-card">
@@ -184,6 +189,7 @@ function ShopPage() {
 
       </section>
 
+      {/* FEATURES SECTION (trust badges) */}
       <section className="shop-features">
 
         <div className="feature-box">

@@ -6,6 +6,7 @@ function HomePage() {
   return (
     <div className="home-page">
 
+      {/* HERO SECTION */}
       <section className="hero-section">
 
         <div className="hero-text">
@@ -19,11 +20,13 @@ function HomePage() {
           </p>
 
           <div className="hero-buttons">
+            {/* Navigate to cats page */}
             <Link to="/cats">
               <button className="primary-btn">
                 🐾 Adopt a Cat
               </button>
             </Link>
+            {/* Navigate to shop page */}
             <Link to="/shop">
               <button className="secondary-btn">
               Browse Shop
@@ -41,6 +44,7 @@ function HomePage() {
 
       </section>
 
+      {/* FEATURED CATS SECTION */}
       <section className="content-section">
 
         <div className="section-header">
@@ -94,6 +98,7 @@ function HomePage() {
         </div>
       </section>
 
+      {/* SHOP SECTION */}
       <section className="content-section">
 
         <div className="section-header">
@@ -139,6 +144,7 @@ function HomePage() {
         </div>
       </section>
 
+      {/* ARTICLES / TIPS SECTION */}
       <section className="content-section">
 
         <div className="section-header">
