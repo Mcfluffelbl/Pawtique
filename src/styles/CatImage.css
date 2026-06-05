@@ -1,7 +1,24 @@
 .fallback-image {
-  width: 40% !important;
-  height: 40% !important;
+  width: 150px !important;
+  height: 150px !important;
   object-fit: contain !important;
   margin: 20px auto;
   display: block;
+}
+
+/* TABLET (≤ 1024px) */
+@media (max-width: 1024px) {
+  .fallback-image {
+    width: 120px !important;
+    height: 120px !important;
+  }
+}
+
+/* MOBILE (≤ 768px) */
+@media (max-width: 768px) {
+  .fallback-image {
+    width: 90px !important;
+    height: 90px !important;
+    margin: 15px auto;
+  }
 }
