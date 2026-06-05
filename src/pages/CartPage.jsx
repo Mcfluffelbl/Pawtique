@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import CatImage from "../components/CatImage";
 import "../styles/CartPage.css";
 
+
+// Icons from react-bootstrap-icons
 import {
   ArrowLeft,
   Cart,
@@ -15,13 +17,24 @@ import {
   Trash,
 } from "react-bootstrap-icons";
 
+/*
+  CartPage component
+  - Displays all cats added to cart
+  - Handles checkout modal + order form
+  - Calculates subtotal, shipping, and total
+*/
 function CartPage() {
+  // Get cart data and functions from context
   const { cart, removeFromCart, clearCart } = useCart();
+  // Derived state
   const isEmpty = cart.length === 0;
   const catCount = cart.length;
+  // Pricing logic
   const subtotal = cart.length * 10;
+   // Create a string of all cat breed names in cart
   const breeds = cart.map((cat) => cat.name).join(", ");
 
+  // Shipping logic
   let shipping = 0;
 
   if (subtotal > 0 && subtotal < 49) {
@@ -30,16 +43,20 @@ function CartPage() {
   shipping = 0;
   }
 
+  // Final total price
   const total = subtotal + shipping;
 
+  // Modal state (checkout popup)
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // Form state for checkout
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     address: "",
   });
 
+  // Handles input changes in checkout form
   function handleChange(e) {
     setFormData({
       ...formData,
@@ -47,6 +64,7 @@ function CartPage() {
     });
   }
 
+  // Handles form submission (checkout)
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -59,10 +77,13 @@ function CartPage() {
       `Order confirmed!\n\nName: ${formData.name}\nEmail: ${formData.email}\nAddress: ${formData.address}\n\nTotal: $${total.toFixed(2)}\nCat breeds adopted: ${breeds} \nCats adopted: ${catCount}\n\nThank you for adopting a cat from Pawtique!`
     );
 
+    // Clear cart after successful order
     clearCart();
 
+    // Close modal
     setIsModalOpen(false);
 
+    // Reset form fields
     setFormData({
       name: "",
       email: "",
@@ -73,6 +94,7 @@ function CartPage() {
   return (
     <div className="cart-page">
 
+      {/* PAGE HEADER */}
       <div className="cart-header">
         <h1>
           Your Cart <Cart />
@@ -110,6 +132,7 @@ function CartPage() {
           </div>
           ))}
 
+          {/* Continue shopping button */}
           <Link to="/cats">
             <button className="continue-btn">
               <ArrowLeft />
@@ -119,6 +142,7 @@ function CartPage() {
 
         </div>
 
+        {/* RIGHT SIDE - ORDER SUMMARY */}
         <div className="order-summary">
 
           <h2>Order Summary</h2>
@@ -180,6 +204,7 @@ function CartPage() {
 
       </div>
 
+      {/* CHECKOUT MODAL */}
       {isModalOpen && (
         <div className="modal-overlay">
           <div className="modal">

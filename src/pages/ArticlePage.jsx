@@ -1,9 +1,16 @@
+// Import CSS for styling the Article page
 import "../styles/ArticlePage.css"
 
+/*
+  ArticlePage component
+  - Displays multiple cat care articles
+  - Each article contains a hero section and a detailed content section
+*/
 function ArticlePage() {
   return (
     <div className="article-page">
 
+  {/* ARTICLE 1 HERO */}
   <section className="article-hero">
     <div className="hero-content">
 
@@ -66,6 +73,7 @@ function ArticlePage() {
 
   </article>
 
+  {/* ARTICLE 2 HERO */}
   <section className="article-hero">
     <div className="hero-content">
 

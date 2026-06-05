@@ -1,9 +1,16 @@
+// Import CSS for AboutPage
 import "../styles/AboutPage.css";
 
+/*
+  AboutPage component
+  - Displays information about the company/brand
+  - Includes hero section, mission section, and stats
+*/
 function AboutPage() {
   return (
     <div className="about-page">
 
+      {/* HERO SECTION */}
       <section className="about-hero">
 
         <div className="about-text">
@@ -29,6 +36,7 @@ function AboutPage() {
 
       </section>
 
+      {/* MISSION SECTION */}
       <section className="mission-section">
 
         <img
@@ -82,6 +90,7 @@ function AboutPage() {
 
       </section>
 
+      {/* STATS SECTION */}
       <section className="stats-section">
 
         <div className="stat-card">
