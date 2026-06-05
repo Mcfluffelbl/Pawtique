@@ -1,4 +1,4 @@
-# Pawtique
+# 🐾Pawtique
 Pawtique is a modern React web application where users can browse cat breeds, adopt cats, and shop cat-related products. The goal of the project is to simulate a real e-commerce experience with a clean UI and interactive features, using react.
 
 # Features
@@ -90,6 +90,39 @@ This project uses:
 - App.jsx
 - index.css
 - main.jsx
+
+# Key Logic
+## Cart Context
+- Prevents duplicate cats in cart
+- Handles add / remove / clear functionality globally
+
+## Pagination Hook
+- Splits large datasets into pages
+- Controls next/previous navigation
+- Keeps UI performance smooth
+
+## Search Feature
+- Filters cats in real time
+
+# Future Improvements
+- Authentication (login/signup)
+- Save favorites list
+- Product API for dynamic shop page
+- Dark mode
+
+# Installation
+git clone https://github.com/yourusername/pawtique.git
+cd pawtique
+npm install
+npm run dev
+
+# 🧡 About the Project
+This project was built as a learning project to practice:
+- React architecture
+- State management
+- API integration
+- UI/UX design
+- Component reusability
 
 # React + Vite
 
